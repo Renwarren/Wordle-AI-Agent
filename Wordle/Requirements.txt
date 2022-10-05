@@ -1,0 +1,44 @@
+--------PACKAGES-----------
+-Pygame
+
+
+--------MODULES------------
+***constants.py***
+
+Contains all the constants of the code.
+
+***solver.py***
+
+contains the class of the AI agent(solver)
+properties:
+guess:the AI agent current guess
+guess_list: AI agent current dictionnary
+
+fill_word(self):
+	sets the agent initial dictionnary
+choose_words(self):
+	randomly choose a word from the dictionnary
+remove_words(self,feedback):
+	remove words that do not match the feedback.
+
+***utility.py***
+contains useful functions that can be reused in the future.
+
+load_dict(filename):
+	returns the list of all the words from filename
+slice_word(words):
+	returns the list of all the words in UPPERCASE without \ncharacter
+
+***wordle_gui.py***
+contains the GUI of the game and interacts with the solver
+
+draw_unguessed_letters():
+	draws on the screen the letter not yet used by the solver
+determine_unguessed_letters(guesses):
+	determines the letters not yet guessed by the solver
+determine_color(guess, position):
+	determine the color of the letter in guess at position. 
+draw_squares(y_begin,x_begin,sq_sz,GAME_OVER):
+	draw the squares of Side sq_sz for the actual guesses starting at coordinates (x_begin,y_begin)
+
+
